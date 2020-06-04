@@ -6,6 +6,7 @@ Flutter package that triggers action depending on the tilt position of a phone. 
 To use this package add tilt_action to your as a [dependency to your pubsec.yaml](https://flutter.dev/docs/development/packages-and-plugins/using-packages)
 
 ## Example
+Testing on a physical device is highly recommended
 ```
 class _TiltActionDemoState extends State<TiltActionDemo> {
   String text;

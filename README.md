@@ -6,47 +6,22 @@ Flutter package that triggers action depending on the tilt position of a phone. 
 To use this package add tilt_action to your as a [dependency to your pubsec.yaml](https://flutter.dev/docs/development/packages-and-plugins/using-packages)
 
 ## Example
+
+```
+Tilt tilt = Tilt(
+  onTiltUp: () {
+    // When phone is tilted up, do this
+  },
+  onNormal: () {
+    // When phone is neither up nor down, do this
+  },
+  onTiltDown: () {
+    // When phone is tilted down, do this
+  },
+);
+```
+
 Testing on a physical device is highly recommended
-```
-class _TiltActionDemoState extends State<TiltActionDemo> {
-  String text;
-  Tilt tilt;
 
-  @override
-  void initState() {
-    super.initState();
+**[Full example](https://github.com/itodotimothy6/tilt_action/blob/master/example/lib/main.dart)**
 
-    tilt = Tilt(onTiltUp: () {
-      setState(() {
-        text = "I am tilted Up";
-      });
-    }, onTiltDown: () {
-      setState(() {
-        text = "I am tilted Down";
-      });
-    }, onNormal: () {
-      setState(() {
-        text = "Neither Up or Down";
-      });
-    });
-  }
-
-  @override
-  void dispose() {
-    super.dispose();
-    
-    tilt.stopListening();
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      body: Center(
-        child: Container(
-          child: Text(text),
-        ),
-      ),
-    );
-  }
-}
-```

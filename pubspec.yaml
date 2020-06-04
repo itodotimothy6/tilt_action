@@ -2,7 +2,7 @@ name: tilt_action
 description: Flutter package that triggers action depending on the position of the phone
 version: 0.0.1
 author: Timothy Itodo <itodotimothy6@gmail.com>
-homepage:
+homepage: https://github.com/itodotimothy6/tilt_action
 
 environment:
   sdk: ">=2.7.0 <3.0.0"

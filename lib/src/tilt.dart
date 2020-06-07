@@ -63,7 +63,7 @@ class Tilt {
   });
 
   /// Starts listening for accelerometer events
-  void startListening() {
+  void startListening() async {
     const double gravity = 9.80665;
 
     _streamSubscription =
